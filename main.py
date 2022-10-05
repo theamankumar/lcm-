@@ -1,13 +1,16 @@
-def least_common_multiple(a, b):
-    if a > b:
-        greater = a
-    elif b > a:
-        greater = b
-    while(True):
-        if ((greater % a == 0) and (greater % b == 0)):
-            lcm = greater
-            break
-        greater = greater + 1
-    return lcm
+# Python program to find LCM of two numbers
 
-print(least_common_multiple(10, 12))
+# Recursive function to return gcd of a and b
+def gcd(a,b):
+	if a == 0:
+		return b
+	return gcd(b % a, a)
+
+# Function to return LCM of two numbers
+def lcm(a,b):
+	return (a / gcd(a,b))* b
+
+# Driver program to test above function
+a = input("Enter First Integer: ")
+b = input("Enter Second Integer: ")
+print('LCM of', a, 'and', b, 'is', lcm(a, b))
