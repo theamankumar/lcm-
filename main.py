@@ -11,6 +11,6 @@ def lcm(a,b):
 	return (a / gcd(a,b))* b
 
 # Driver program to test above function
-a = input("Enter First Integer: ")
-b = input("Enter Second Integer: ")
+a = int(input("Enter First Integer: "))
+b = int(input("Enter Second Integer: "))
 print('LCM of', a, 'and', b, 'is', lcm(a, b))
